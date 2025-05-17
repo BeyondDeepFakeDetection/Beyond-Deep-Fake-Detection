@@ -6,9 +6,6 @@ from huggingface_hub import login
 from safetensors.torch import load_file
 from tqdm import tqdm
 from datasets import load_dataset
-from datasets import Dataset
-import gc
-import time
 
 
 hf_token = "<Enter hf-token>"
