@@ -1,7 +1,10 @@
 transformers>=4.40.0
-datasets
-torch
-scikit-learn
-pandas
-numpy
-matplotlib
+datasets>=2.18.0
+huggingface_hub>=0.20.0
+torch>=2.1.0
+pandas>=2.1.0
+numpy>=1.25.0
+matplotlib>=3.8.0
+seaborn>=0.12.0
+safetensors>=0.4.0
+tqdm>=4.66.0
