@@ -20,7 +20,7 @@ This repository contains the official implementation of our NeurIPS 2025 paper:
 
 We formally define the notion of **deception** in online media and introduce **semantic calibration** — a framework that detects media samples which distort semantic expectations, even when they are synthetically flawless. Our pipeline operates by:
 
-- Captioning media content into text using image-to-text models
+- Captioning media content into text using image-to-text and audio-to-text models
 - Computing acceptance probabilities for semantic consistency using fine-tuned large language models (LLMs)
 - Rejection sampling over the semantic space to detect content that is surprising or overrepresented under a calibrated distribution
 
