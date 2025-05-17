@@ -22,7 +22,7 @@ def fine_tune_on_hf(real_dataset_name, split):
     train_dataset = split_dataset["train"]
     test_dataset = split_dataset["test"]
     # Load tokenizer and model
-    tokenizer = GPT2Tokenizer.from_pretrained(model_name)
+    tokenizer = GPT2Tokenizer.from_pretrained("gpt2")
     model = GPT2LMHeadModel.from_pretrained(
         "gpt2",
         device_map="auto",
