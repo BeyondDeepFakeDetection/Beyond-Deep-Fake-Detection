@@ -50,3 +50,9 @@ pip install -r requirements.txt
 ```
 
 ## ✅ Quick Start
+
+### 1. Load dataset of choice
+
+### 2. Load general model (fine tuned on the chosen dataset)
+
+### 3. Load real model with split of your choice (fine tuned on the chosen dataset)
