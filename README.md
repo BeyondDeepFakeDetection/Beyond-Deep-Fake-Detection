@@ -32,9 +32,9 @@ This approach is:
 
 We release:
 - Code to reproduce all experiments from the paper.
-- Pretrained GPT-2 models fine-tuned on real and fake data.
-- Rejection-sampled datasets simulating distribution shifts.
-- Evaluation scripts for our classification and divergence metrics.
+- Pretrained GPT-2 models fine-tuned on general and real distributions.
+- Semantically distorted datasets simulating distribution shifts.
+- Evaluation script for kl-divergence and deception reduction metrics.
 ---
 
 ## 📦 Installation
