@@ -2,7 +2,7 @@
 
 This repository contains the official implementation of our NeurIPS 2025 paper:
 
-> **Beyond Deep Fake Detection: Reverse Engineering Prompts for Out-of-Distribution Detection in Generative Media**
+> **Beyond Deep Fake Detection: Framework for Semantic Calibration of deceptive media distributions.**
 
 ## 🔗 Links
 
