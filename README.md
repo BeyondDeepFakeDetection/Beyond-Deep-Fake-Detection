@@ -42,7 +42,7 @@ We release:
 We recommend using a virtual environment:
 
 ```bash
-git clone https://github.com/<your-org>/BeyondDeepFakeDetection.git
+git clone https://github.com/BeyondDeepFakeDetection/papaer-NeurIPS.git
 cd BeyondDeepFakeDetection
 python -m venv venv
 source venv/bin/activate
