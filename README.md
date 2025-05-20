@@ -52,10 +52,6 @@ pip install -r requirements.txt
 ## ✅ Quick Start
 We will navigate through an example of running the full pipeline and reproducing results from the paper.
 
-# run_prob.py
-
-## Purpose
-This script computes log probabilities for each word in a dataset of texts using a HuggingFace language model, and saves the results to a CSV file.
 
 ## Setup
 
@@ -70,13 +66,14 @@ This script computes log probabilities for each word in a dataset of texts using
    - `save_name`: Path (without `.csv`) where token-prob results will be saved.
    - `dataset`: The HuggingFace dataset name (e.g., `"CIFAR-10"`).
    - `text_column`: The column in the dataset containing the text (default: `"text"`).
+This script computes log probabilities for each word in a dataset of texts using a HuggingFace language model, and saves the results to a CSV file.
 
-3. **Run the script twice, once for the general and one for the real model:**
+3. **Run the script twice, once for the general and one for the real model with the split of choice (baseline|mild|moderate|severe):**
    ```bash
    python token_sequence_probs.py
    ```
    
-### Output
+### Output token_sequence_probs.py
 
 The script saves a CSV file at `<save_name>.csv` with columns:
 - `text_id`: Index of the text in the dataset.
@@ -85,5 +82,15 @@ The script saves a CSV file at `<save_name>.csv` with columns:
 - `word_probabilities`: List of (word, log_prob) pairs.
 Now having two such CSV files we can compare probability ratios between the two models.
 
-5. **Set the following variables in semantic_calibration_evaluation.py**
-    - 
+4. **Set the following variables in semantic_calibration_evaluation.py**
+   - "label_column_name": The column in teh dataset containing the label (fine_label, coarse_label, label, etc.)
+   - "text_column_name" : The column in the dataset containing the text (default: `"text"`).
+   - "split_name": choice of split name (baseline/mild/moderate/severe)
+   - "dataset_name": The HuggingFace dataset name (e.g., `"CIFAR-10"`)
+   - "save_path" : Set the name o the output path for the Label Distribution Comparison plot.
+   - "real_probs_csv" = Enter the output path of the real-model probabilities (computed in step 3)
+   - "general_probs_csv" = Enter the output path of the general-model probabilities (computed in step 3)
+
+### Output semantic_calibration_evaluation.py
+Printed you will find the results of the experiment, namely the KL-divergence between the general and real distribution, and the filtered and real distribution. The goal is to minimize the latter. A matplotlib chart of the normalized frequencies of the labels will also be plotted. 
+
