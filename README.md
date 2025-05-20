@@ -83,7 +83,7 @@ Now having two such CSV files we can compare probability ratios between the two 
 
 ### Running the rejection sampling and evaluating performance
 
-1. **Set the following variables in semantic_calibration_evaluation.py**
+4. **Set the following variables in semantic_calibration_evaluation.py**
    - "label_column_name": The column in teh dataset containing the label (fine_label, coarse_label, label, etc.)
    - "text_column_name" : The column in the dataset containing the text (default: `"text"`).
    - "split_name": choice of split name (baseline/mild/moderate/severe)
@@ -92,7 +92,7 @@ Now having two such CSV files we can compare probability ratios between the two 
    - "real_probs_csv" = Enter the output path of the real-model probabilities (computed in step 3)
    - "general_probs_csv" = Enter the output path of the general-model probabilities (computed in step 3)
 
-2. Run the script:
+5. Run the script:
    ```bash
    python semantic_calibration_evaluation.py
    ```
