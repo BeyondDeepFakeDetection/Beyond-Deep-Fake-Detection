@@ -52,8 +52,38 @@ pip install -r requirements.txt
 ## ✅ Quick Start
 We will navigate through an example of running the full pipeline and reproducing results from the paper.
 
-### 1. Select dataset of choice:
+# run_prob.py
 
-### 2. Load general model (fine tuned on the chosen dataset)
+## Purpose
+This script computes log probabilities for each word in a dataset of texts using a HuggingFace language model, and saves the results to a CSV file.
 
-### 3. Load real model with split of your choice (fine tuned on the chosen dataset)
+## Setup
+
+1. **Install dependencies:**
+   ```bash
+   pip install transformers torch pandas huggingface_hub safetensors tqdm datasets seaborn matplotlib numpy 
+   ```
+
+2. **Set the following variables in `token_sequence_probs.py`:**
+   - `hf_token`: Your HuggingFace API token.
+   - `model_name`: The name of the model to use (e.g., `"CIFAR-10_general, cifar-10_moderate"`).
+   - `save_name`: Path (without `.csv`) where token-prob results will be saved.
+   - `dataset`: The HuggingFace dataset name (e.g., `"CIFAR-10"`).
+   - `text_column`: The column in the dataset containing the text (default: `"text"`).
+
+3. **Run the script twice, once for the general and one for the real model:**
+   ```bash
+   python token_sequence_probs.py
+   ```
+   
+### Output
+
+The script saves a CSV file at `<save_name>.csv` with columns:
+- `text_id`: Index of the text in the dataset.
+- `total_log_prob`: Sum of log probabilities for the text.
+- `avg_log_prob`: Average log probability per word.
+- `word_probabilities`: List of (word, log_prob) pairs.
+Now having two such CSV files we can compare probability ratios between the two models.
+
+5. **Set the following variables in semantic_calibration_evaluation.py**
+    - 
