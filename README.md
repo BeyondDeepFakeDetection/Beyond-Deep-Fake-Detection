@@ -52,8 +52,7 @@ pip install -r requirements.txt
 ## ✅ Quick Start
 We will navigate through an example of running the full pipeline and reproducing results from the paper.
 
-
-## Setup
+### Computing log-probs of texts
 
 1. **Install dependencies:**
    ```bash
@@ -73,7 +72,7 @@ This script computes log probabilities for each word in a dataset of texts using
    python token_sequence_probs.py
    ```
    
-### Output token_sequence_probs.py
+#### Output token_sequence_probs.py
 
 The script saves a CSV file at `<save_name>.csv` with columns:
 - `text_id`: Index of the text in the dataset.
@@ -82,7 +81,9 @@ The script saves a CSV file at `<save_name>.csv` with columns:
 - `word_probabilities`: List of (word, log_prob) pairs.
 Now having two such CSV files we can compare probability ratios between the two models.
 
-4. **Set the following variables in semantic_calibration_evaluation.py**
+### Running the rejection sampling and evaluating performance
+
+1. **Set the following variables in semantic_calibration_evaluation.py**
    - "label_column_name": The column in teh dataset containing the label (fine_label, coarse_label, label, etc.)
    - "text_column_name" : The column in the dataset containing the text (default: `"text"`).
    - "split_name": choice of split name (baseline/mild/moderate/severe)
@@ -91,6 +92,11 @@ Now having two such CSV files we can compare probability ratios between the two 
    - "real_probs_csv" = Enter the output path of the real-model probabilities (computed in step 3)
    - "general_probs_csv" = Enter the output path of the general-model probabilities (computed in step 3)
 
+2. Run the script:
+   ```bash
+   python semantic_calibration_evaluation.py
+   ```
+   
 ### Output semantic_calibration_evaluation.py
 Printed you will find the results of the experiment, namely the KL-divergence between the general and real distribution, and the filtered and real distribution. The goal is to minimize the latter. A matplotlib chart of the normalized frequencies of the labels will also be plotted. 
 
