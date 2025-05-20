@@ -1,16 +1,16 @@
-# Beyond Deep Fake Detection (NeurIPS 2025)
+# Beyond Deep Fake Detection (2025)
 
-This repository contains the official implementation of our NeurIPS 2025 paper:
+This repository contains the official implementation of our paper:
 
 > **Beyond Deep Fake Detection: Framework for Semantic Calibration of deceptive media distributions.**
 
 ## 🔗 Links
 
-- 📝 Paper: [NeurIPS 2025 PDF Link] <!-- update once available -->
+- 📝 Paper: [2025 PDF Link] <!-- update once available -->
 - 🤗 Hugging Face: [https://huggingface.co/BeyondDeepFakeDetection](https://huggingface.co/BeyondDeepFakeDetection)
 - 📊 Datasets: [https://huggingface.co/BeyondDeepFakeDetection](https://huggingface.co/BeyondDeepFakeDetection)
 - 📦 Fine-tuned Models: [https://huggingface.co/BeyondDeepFakeDetection](https://huggingface.co/BeyondDeepFakeDetection)
-- 📁 Code: [https://github.com/BeyondDeepFakeDetection/paper-NeurIPS](https://github.com/BeyondDeepFakeDetection/paper-NeurIPS)
+- 📁 Code: [https://github.com/BeyondDeepFakeDetection/Beyond-Deep-Fake-Detection](https://github.com/BeyondDeepFakeDetection/Beyond-Deep-Fake-Detection)
 
 ---
 
@@ -50,8 +50,9 @@ pip install -r requirements.txt
 ```
 
 ## ✅ Quick Start
+We will navigate through an example of running the full pipeline and reproducing results from the paper.
 
-### 1. Load dataset of choice
+### 1. Select dataset of choice:
 
 ### 2. Load general model (fine tuned on the chosen dataset)
 
