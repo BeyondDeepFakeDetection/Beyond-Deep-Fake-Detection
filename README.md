@@ -43,7 +43,7 @@ We recommend using a virtual environment:
 
 ```bash
 git clone https://github.com/BeyondDeepFakeDetection/.git
-cd paper-NeurIPS
+cd Beyond-Deep-Fake-Detection
 python -m venv venv
 source venv/bin/activate
 pip install -r requirements.txt
