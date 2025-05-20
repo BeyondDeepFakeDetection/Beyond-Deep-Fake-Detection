@@ -38,7 +38,9 @@ We release:
 ---
 
 ## Visualisation of our filtering mechanism
-![Demo](assets/animation_v2.gif)
+<p align="center">
+  <img src="assets/animation_v2.gif" width="400"/>
+</p>
 
 ## 📦 Installation
 
