@@ -17,7 +17,7 @@ from huggingface_hub import login
 def main():
     parser = argparse.ArgumentParser(description="Audio captioning with Qwen2-Audio-7B-Instruct on ESC-50.")
     parser.add_argument('--model', type=str, default="Qwen/Qwen2-Audio-7B-Instruct", help='Model name')
-    parser.add_argument('--prompt', type=str, default="Describe the sound in this audio clip.", help='Prompt for captioning')
+    parser.add_argument('--prompt', type=str, default="Describe the sounds in this audio clip.", help='Prompt for captioning')
     parser.add_argument('--hf_token', type=str, default=None, help='HuggingFace token (or set HF_TOKEN env var)')
     args = parser.parse_args()
 
