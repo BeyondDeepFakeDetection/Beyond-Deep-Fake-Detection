@@ -37,6 +37,9 @@ We release:
 - Evaluation script for kl-divergence and deception reduction metrics.
 ---
 
+## Visualisation of our filtering mechanism
+![Demo](assets/animation_v2.gif)
+
 ## 📦 Installation
 
 We recommend using a virtual environment:
