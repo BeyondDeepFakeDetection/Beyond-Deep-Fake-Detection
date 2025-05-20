@@ -39,7 +39,7 @@ We release:
 
 ## Visualisation of our filtering mechanism
 <p align="center">
-  <img src="assets/animation_v2.gif" width="700"/>
+  <img src="assets/animation_bdfd.gif" width="700"/>
 </p>
 
 ## 📦 Installation
