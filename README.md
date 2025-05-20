@@ -92,10 +92,10 @@ Now having two such CSV files we can compare probability ratios between the two 
    - "label_column_name": The column in teh dataset containing the label (fine_label, coarse_label, label, etc.)
    - "text_column_name" : The column in the dataset containing the text (default: `"text"`).
    - "split_name": choice of split name (baseline/mild/moderate/severe)
-   - "dataset_name": The HuggingFace dataset name (e.g., `"CIFAR-10"`)
+   - "dataset_name" : The HuggingFace dataset name (e.g., `"CIFAR-10"`)
    - "save_path" : Set the name o the output path for the Label Distribution Comparison plot.
-   - "real_probs_csv" = Enter the output path of the real-model probabilities (computed in step 3)
-   - "general_probs_csv" = Enter the output path of the general-model probabilities (computed in step 3)
+   - "real_probs_csv" : Enter the output path of the real-model probabilities (computed in step 3)
+   - "general_probs_csv" : Enter the output path of the general-model probabilities (computed in step 3)
 
 5. Run the script:
    ```bash
