@@ -83,7 +83,6 @@ source venv/bin/activate
 pip install -r requirements.txt
 ```
 <br>
-## Repository Structure
 
 ## ✅ Quick Start
 We will navigate through an example of running the full pipeline and reproducing results from the paper.
