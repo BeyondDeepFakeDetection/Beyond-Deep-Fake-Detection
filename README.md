@@ -50,7 +50,7 @@ The live figure below shows how our filtering mechanism operates in an online se
 ### `scripts/`
 
 1. **`Florence_captioning.py`**  
-   Contains the exact model and configuration used to generate image captions for our datasets using the Florence model.
+   Contains the exact configuration used to generate image captions for our image datasets using the Florence model.
 
 2. **`finetune_gpt2.py`**  
    Script used to fine-tune 40 GPT-2 models with our experimental setup.
