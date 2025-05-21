@@ -36,24 +36,11 @@ We release:
 ---
 
 ## Visualization of our filtering mechanism
-The live figure below shows how our filtering mechanism operates in an online setting. The yellow bars represent the general distribution of label IDs, which is the original distribution from which we sample. The dark blue bars represent the real distribution, which is our target. The light blue bars show the filtered distribution, which is updated continuously and should closely match the real distribution. In the top right corner, a legend displays the number of accepted samples, and just below it, the current deception reduction level is shown in real time.
+The live figure below shows how our filtering mechanism operates in an online setting. The yellow bars represent the general distribution of label IDs, which is the original distribution from which we sample. The dark blue bars represent the real distribution, which is our target. The light blue bars show the filtered distribution, which is updated continuously and should closely match the real distribution. In the top right corner, a legend displays the number of accepted samples, and just next to it, the current **deception reduction** level is shown in real time.
 <p align="center">
   <img src="assets/animation_bdfd.gif" width="800"/>
 </p>
 
-
-## 📦 Installation
-
-We recommend using a virtual environment:
-
-```bash
-git clone https://github.com/BeyondDeepFakeDetection/.git
-cd Beyond-Deep-Fake-Detection
-python -m venv venv
-source venv/bin/activate
-pip install -r requirements.txt
-```
-## Repository Structure
 
 ### `creating_datasets/`
 
@@ -81,8 +68,21 @@ pip install -r requirements.txt
 
 5. **`tokens_sequence_probs.py`**  
    Computes per-token log-probabilities and overall sequence likelihoods using fine-tuned GPT-2 models. Used as input for the evaluation script.
+<br><br><br>
 
+## 📦 Installation
 
+We recommend using a virtual environment:
+
+```bash
+git clone https://github.com/BeyondDeepFakeDetection/.git
+cd Beyond-Deep-Fake-Detection
+python -m venv venv
+source venv/bin/activate
+pip install -r requirements.txt
+```
+<br>
+## Repository Structure
 
 ## ✅ Quick Start
 We will navigate through an example of running the full pipeline and reproducing results from the paper.
