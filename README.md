@@ -41,7 +41,8 @@ The live figure below shows how our filtering mechanism operates in an online se
   <img src="assets/animation_bdfd.gif" width="800"/>
 </p>
 
-
+<br><br><br>
+## Repository Structure
 ### `creating_datasets/`
 
 1. **`distort.py`**  
