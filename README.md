@@ -22,12 +22,6 @@ We formally define the notion of **deception** in online media and introduce **s
 - Computing acceptance probabilities for semantic consistency using fine-tuned large language models (LLMs)
 - Rejection sampling over the semantic space to detect content that is surprising or overrepresented under a calibrated distribution
 
-This approach is:
-
-- **Modality-agnostic**: applicable to any media that can be converted to text  
-- **Explainable**: decisions are based on interpretable semantic tokens  
-- **Robust to future generative advances**: does not rely on generative artifacts
-
 We release:
 - Code to reproduce all experiments from the paper.
 - Pretrained GPT-2 models fine-tuned on general and real distributions.
