@@ -38,7 +38,7 @@ We release:
 ## Visualization of our filtering mechanism
 The live figure below shows how our filtering mechanism operates in an online setting. The yellow bars represent the general distribution of label IDs, which is the original distribution from which we sample. The dark blue bars represent the real distribution, which is our target. The light blue bars show the filtered distribution, which is updated continuously and should closely match the real distribution. In the top right corner, a legend displays the number of accepted samples, and just next to it, the current **deception reduction** level is shown in real time.
 <p align="center">
-  <img src="assets/animation_bdfd.gif" width="800"/>
+  <img src="assets/animation_dec_red.gif" width="800"/>
 </p>
 
 <br><br><br>
