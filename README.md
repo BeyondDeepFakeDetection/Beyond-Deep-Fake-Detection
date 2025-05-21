@@ -1,8 +1,6 @@
 # Beyond Deep Fake Detection (2025)
 
-This repository contains the official implementation of our paper:
-
-> **Beyond Deep Fake Detection: Framework for Semantic Calibration of deceptive media distributions.**
+This repository contains the official implementation of our paper.
 
 ## 🔗 Links
 
@@ -37,10 +35,12 @@ We release:
 - Evaluation script for kl-divergence and deception reduction metrics.
 ---
 
-## Visualisation of our filtering mechanism
+## Visualization of our filtering mechanism
+The live figure below shows how our filtering mechanism operates in an online setting. The yellow bars represent the general distribution of label IDs, which is the original distribution from which we sample. The dark blue bars represent the real distribution, which is our target. The light blue bars show the filtered distribution, which is updated continuously and should closely match the real distribution. In the top right corner, a legend displays the number of accepted samples, and just below it, the current deception reduction level is shown in real time.
 <p align="center">
-  <img src="assets/animation_bdfd.gif" width="700"/>
+  <img src="assets/animation_bdfd.gif" width="800"/>
 </p>
+
 
 ## 📦 Installation
 
@@ -53,6 +53,34 @@ python -m venv venv
 source venv/bin/activate
 pip install -r requirements.txt
 ```
+## Repository Structure
+
+### `creating_datasets/`
+
+1. **`distort.py`**  
+   Generates various splits of the real data distribution from the original general distribution. You can specify a target KL-divergence and adjust the `target_frequencies` list to obtain a subset that meets the desired divergence.
+
+2. **Label Mapping JSONs**  
+   JSON files used to map fine-grained labels into custom coarse-grained labels.
+
+---
+
+### `scripts/`
+
+1. **`Florence_captioning.py`**  
+   Contains the exact model and configuration used to generate image captions for our datasets using the Florence model.
+
+2. **`finetune_gpt2.py`**  
+   Script used to fine-tune 40 GPT-2 models with our experimental setup.
+
+3. **`qwen_audio_captioning.py`**  
+   Generates audio captions using Qwen-Audio, aligned with the methodology in our experiments.
+
+4. **`semantic_calibration_evaluation.py`**  
+   Main evaluation pipeline script. Handles rejection sampling, computes performance metrics (deception reduction), and assumes precomputed log-probabilities per token (via `tokens_sequence_probs.py`).
+
+5. **`tokens_sequence_probs.py`**  
+   Computes per-token log-probabilities and overall sequence likelihoods using fine-tuned GPT-2 models. Used as input for the evaluation script.
 
 ## ✅ Quick Start
 We will navigate through an example of running the full pipeline and reproducing results from the paper.
