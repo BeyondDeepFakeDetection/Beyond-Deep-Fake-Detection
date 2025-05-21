@@ -66,7 +66,7 @@ We will navigate through an example of running the full pipeline and reproducing
 
 2. **Set the following variables in `token_sequence_probs.py`:**
    - `hf_token`: Your HuggingFace API token.
-   - `model_name`: The name of the model to use (e.g., `"CIFAR-10_general, cifar-10_moderate"`).
+   - `model_name`: The name of the model to use (e.g., `"CIFAR-10_general, CIFAR-10_moderate"`).
    - `save_name`: Path (without `.csv`) where token-prob results will be saved.
    - `dataset`: The HuggingFace dataset name (e.g., `"CIFAR-10"`).
    - `text_column`: The column in the dataset containing the text (default: `"text"`).
