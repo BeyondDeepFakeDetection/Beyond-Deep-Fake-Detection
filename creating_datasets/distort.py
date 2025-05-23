@@ -24,7 +24,7 @@ total_labels = general_train_dataset[label_column_name].nunique()
 tries = 0
 while True:
     tries += 1
-    if tries > 25:
+    if tries > 24:
         print("error")
         exit()
         
