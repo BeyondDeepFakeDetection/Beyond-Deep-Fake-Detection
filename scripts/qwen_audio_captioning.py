@@ -1,6 +1,6 @@
 """
 Qwen2-Audio-7B-Instruct ESC-50 Captioning Script
-Minimal example for public release (NeurIPS paper code)
+Minimal example for public release 
 """
 import torch
 import soundfile as sf
