@@ -1,11 +1,9 @@
 """
-Demo: Using Florence-2 for Image Captioning (NeurIPS Paper Example)
+Demo: Using Florence-2 for Image Captioning
 
 This script demonstrates how to use Microsoft's Florence-2 model to generate detailed captions for images.
 It loads a sample image from the CIFAR-10 dataset, runs Florence-2, and prints the generated caption.
 
-For more details, see our NeurIPS paper: <NeurIPS-paper-link>
-GitHub: <BeyondDeepFakeDetection/paper-NeurIPS>
 """
 # ------------------- Imports and Florence Setup -------------------
 import os
